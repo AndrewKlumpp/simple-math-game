@@ -52,3 +52,23 @@ body.overlay-is-open .overlay {
 body.overlay-is-open .main-ui {
     filter: blur(4px);
 }
+
+@keyframes showError {
+    50% {
+        color: red;
+        transform: scale(1.5);
+    }
+
+    100% {
+        color: #333;
+        transform: scale(1);
+    }
+}
+
+.animate-wrong {
+    animation: .5s showError;
+}
+
+.problem {
+    text-align: center;
+}

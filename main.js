@@ -54,6 +54,8 @@ function handleSubmit(e) { // 'e' = event
     } else { // User submitted answer is wrong
         state.wrongAnswers++;
         mistakesAllowed.textContent = 2 - state.wrongAnswers;
+        problemElement.classList.add("animate-wrong");
+        setTimeout(() => problemElement.classList.remove("animate-wrong"), 500);
     };
     checkLogic()
 };
